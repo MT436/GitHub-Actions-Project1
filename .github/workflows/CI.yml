@@ -15,13 +15,3 @@ jobs:
 
             - name: Build
               run: mvn clean install
-            
-
-            - name: Push Docker image
-              uses: docker/build-push-action@v4
-              with:
-                context: .
-                file: ./Dockerfile
-                tags: username/repository:tag  # Replace with your Docker Hub repo and tag
-                push: true
-
